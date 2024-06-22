@@ -3,4 +3,20 @@
 }
 
 
+.app-main {
+  display: flex;
+}
+
+.sidebar {
+  width: 300px;
+  flex-shrink: 0;
+ 
+  background-color: #fff;
+  border-right: 1px solid lightgray;
+  
+}
+
+
+
+
 

@@ -1,0 +1,37 @@
+.sidebar{
+  margin-top: 10px;
+  
+}
+
+.sidebar_button button{
+  background-color:whitesmoke;
+  border: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 5px 10px;
+  margin-left: 20px;
+  box-shadow: 2px 2px 2px #ccc;
+}
+
+.sidebar_button button span{
+  font-size: 16px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.options{
+  margin-top: 10px;
+}
+
+.single-option{
+  display: flex;
+  align-items: center;
+  padding:5px 20px;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.single-option:hover{
+ background-color: whitesmoke;
+ cursor: pointer;
+}
