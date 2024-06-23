@@ -17,27 +17,8 @@ Vite: A next-generation frontend tool that provides a fast development server an
 React: JavaScript library for building user interfaces.
 Material-UI: React components for faster and easier web development.
 CSS: Styling the components and layout of the application.
-Folder Structure
-bash
-Copy code
-/project-root
-│
-├── /src
-│   ├── /components
-│   │   ├── Header.js
-│   │   ├── Sidebar.js
-│   │   └── Files.js
-│   ├── /css
-│   │   ├── Header.css
-│   │   ├── Sidebar.css
-│   │   └── Files.css
-│   ├── App.css
-│   ├── App.jsx
-│   └── index.jsx
-│
-├── .gitignore
-├── package.json
-└── README.md
+
+
 License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
