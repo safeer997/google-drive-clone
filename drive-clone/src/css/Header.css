@@ -54,6 +54,10 @@
   margin: 0px 10px;
 }
 
+.header_options .material-icons:hover{
+  cursor: pointer;
+}
+
 .header_options .material-icons-spacing{
   margin-right: 0px;
 }

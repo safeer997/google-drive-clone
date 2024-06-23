@@ -1,22 +1,24 @@
-*{
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 .app-main {
   display: flex;
+  height: calc(100vh - 60px); 
 }
 
 .sidebar {
   width: 300px;
   flex-shrink: 0;
- 
   background-color: #fff;
   border-right: 1px solid lightgray;
-  
 }
 
-
-
-
-
+.files {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+ 
+}
