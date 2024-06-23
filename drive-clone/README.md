@@ -50,4 +50,4 @@ Icons from Material-UI (https://mui.com/)
 React (https://reactjs.org/)
 Vite (https://vitejs.dev/)
 Author
-Safeer Alam 
+Safeer Alam .
