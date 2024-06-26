@@ -1,5 +1,3 @@
-// Sidebar.js
-
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import HomeIcon from "@mui/icons-material/Home";
@@ -12,7 +10,7 @@ import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined
 import WbCloudyOutlinedIcon from "@mui/icons-material/WbCloudyOutlined";
 import "../css/Sidebar.css";
 
-function Sidebar() {
+function Sidebar({ handleFileChange }) {
   const [isSidebarVisible, setIsSidebarVisible] = useState(true);
 
   const showSidebar = () => {
@@ -30,9 +28,17 @@ function Sidebar() {
       onMouseLeave={hideSidebar}
     >
       <div className="sidebar_button">
-        <button>
+        <button
+          onClick={() => document.getElementById("file-upload-sidebar").click()}
+        >
           <AddIcon /> <span>New</span>
         </button>
+        <input
+          type="file"
+          onChange={handleFileChange}
+          style={{ display: "none" }}
+          id="file-upload-sidebar"
+        />
       </div>
       <div className="options">
         <div className="single-option">

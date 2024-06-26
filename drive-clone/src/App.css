@@ -21,12 +21,7 @@
   transition: width 0.3s ease;
 }
 
-.sidebar.visible {
-  width: 300px; 
-}
-.sidebar.hidden {
-  width: 0;
-}
+
 
 .files {
   flex-grow: 1;
