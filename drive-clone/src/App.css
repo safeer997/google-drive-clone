@@ -1,3 +1,5 @@
+/* App.css */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,19 +8,28 @@
 
 .app-main {
   display: flex;
-  height: calc(100vh - 60px); 
+  height: calc(100vh - 60px);
+  position: relative;
 }
 
 .sidebar {
-  width: 300px;
+  width: 0;
   flex-shrink: 0;
   background-color: #fff;
   border-right: 1px solid lightgray;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+.sidebar.visible {
+  width: 300px; 
+}
+.sidebar.hidden {
+  width: 0;
 }
 
 .files {
   flex-grow: 1;
   padding: 20px;
   overflow-y: auto;
- 
 }

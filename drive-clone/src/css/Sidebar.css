@@ -3,6 +3,17 @@
   
 }
 
+.sidebar {
+  width: 0;
+  flex-shrink: 0;
+  background-color: #fff;
+  border-right: 1px solid lightgray;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+
+
 .sidebar_button button{
   background-color:whitesmoke;
   border: 1px solid lightgray;

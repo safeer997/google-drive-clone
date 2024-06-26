@@ -1,4 +1,6 @@
-import React from "react";
+// Sidebar.js
+
+import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import HomeIcon from "@mui/icons-material/Home";
 import PhonelinkIcon from "@mui/icons-material/Phonelink";
@@ -11,8 +13,22 @@ import WbCloudyOutlinedIcon from "@mui/icons-material/WbCloudyOutlined";
 import "../css/Sidebar.css";
 
 function Sidebar() {
+  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
+
+  const showSidebar = () => {
+    setIsSidebarVisible(true);
+  };
+
+  const hideSidebar = () => {
+    setIsSidebarVisible(false);
+  };
+
   return (
-    <div className="sidebar">
+    <div
+      className={`sidebar ${isSidebarVisible ? "visible" : "hidden"}`}
+      onMouseEnter={showSidebar}
+      onMouseLeave={hideSidebar}
+    >
       <div className="sidebar_button">
         <button>
           <AddIcon /> <span>New</span>
