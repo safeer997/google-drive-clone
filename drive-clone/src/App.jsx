@@ -85,6 +85,25 @@ function App() {
     }
   };
 
+  //function to change icon color 
+
+  const changeIconColor = async (id, newColor) => {
+    try {
+      const response = await axios.put(
+        `http://localhost:8000/api/v1/users/files/color/${id}`,
+        { color:newColor }
+      );
+      console.log("color changed", response.data);
+
+      const updatedFiles = files.map((file) =>
+        file._id === id ? { ...file, color:newColor } : file
+      );
+      setFiles(updatedFiles);
+    } catch (error) {
+      console.error("Error changing file color:", error);
+    }
+  };
+
   return (
     <>
       <Header />
@@ -96,6 +115,7 @@ function App() {
           handleFileChange={handleFileChange}
           deleteFile={deleteFile}
           renameFile={renameFile}
+          changeIconColor={changeIconColor}
         />
       </div>
     </>
