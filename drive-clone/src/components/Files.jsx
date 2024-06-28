@@ -20,8 +20,8 @@ function Files({ files, deleteFile, renameFile, changeIconColor }) {
     setNewFileName(currentName);
   };
 
-  const handleRename = (fileId) => {
-    renameFile(fileId, newFileName); //sending data to server to rename 
+  const handleRename = () => {
+    renameFile(renameFileId, newFileName); //sending data to server to rename 
     setRenameFileId(null);
   };
 
