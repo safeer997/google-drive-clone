@@ -15,9 +15,8 @@ function Files({ files, deleteFile, renameFile, changeIconColor }) {
   const [fileIconColor, setFileIconColor] = useState("#1c1c1b");
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
 
-  const startRenaming = (fileId, currentName) => {
+  const startRenaming = (fileId) => {
     setRenameFileId(fileId);
-    setNewFileName(currentName);
   };
 
   const handleRename = () => {
@@ -38,7 +37,7 @@ function Files({ files, deleteFile, renameFile, changeIconColor }) {
           <>
             <input
               type="text"
-              value={newFileName}
+             
               onChange={(e) => setNewFileName(e.target.value)}
             />
             <button
