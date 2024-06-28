@@ -1,14 +1,15 @@
+import "../css/Files.css";
 import React, { useState } from "react";
 import { ChromePicker } from "react-color";
 import ArrowUpwardOutlinedIcon from "@mui/icons-material/ArrowUpwardOutlined";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
-import "../css/Files.css";
 import { format } from "date-fns";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import DriveFileRenameOutlineOutlinedIcon from "@mui/icons-material/DriveFileRenameOutlineOutlined";
 import ColorLensIcon from "@mui/icons-material/ColorLens";
 
 function Files({ files, deleteFile, renameFile, changeIconColor }) {
+  
   const [renameFileId, setRenameFileId] = useState(null);
   const [newFileName, setNewFileName] = useState("");
   const [fileIconColor, setFileIconColor] = useState("#1c1c1b");
@@ -20,13 +21,13 @@ function Files({ files, deleteFile, renameFile, changeIconColor }) {
   };
 
   const handleRename = (fileId) => {
-    renameFile(fileId, newFileName);
+    renameFile(fileId, newFileName); //sending data to server to rename 
     setRenameFileId(null);
   };
 
   const handleColorChange = (fileId, color) => {
     setFileIconColor(color.hex);
-    changeIconColor(fileId, color.hex);
+    changeIconColor(fileId, color.hex);  //sending data to change color
   };
 
   // Function to render the list of files

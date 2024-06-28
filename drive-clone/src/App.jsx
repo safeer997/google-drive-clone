@@ -9,6 +9,8 @@ function App() {
   const [files, setFiles] = useState([]);
   const [selectedFile, setSelectedFile] = useState(null);
 
+
+  //fetching files from server
   useEffect(() => {
     fetchFiles();
   }, []);
